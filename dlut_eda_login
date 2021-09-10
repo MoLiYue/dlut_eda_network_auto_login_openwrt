@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+START=99
+STOP=15
+
+start(){
+  echo "start dlut_eda_connection"
+  /etc/dlut_eda_login.sh -u "#你的用户名#" -p "#你的密码#"
+}
+
+stop(){
+  echo "start dlut_eda_disconnection"
+  /etc/dlut_eda_login.sh -o
+}
