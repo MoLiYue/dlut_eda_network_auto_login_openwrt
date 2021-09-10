@@ -2,8 +2,6 @@
 
 > 大连理工大学开发区校区dlut-eda网络openwrt自动登陆、开机自启配置
 
-[toc]
-
 ## 第一步 下载login.sh文件
 
 首先需要感谢bboymega大佬的 [dlut-eda-shell-login](https://github.com/bboymega/dlut-eda-shell-login) dlut_eda_login.sh文件
