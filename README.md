@@ -8,7 +8,7 @@
 
 由于OpenWrt中curl可能不能进行compressed的工作（windows下也有可能出现相同的错误），我们需要将curl命令后面带有的 --compressed全部去掉。去掉compressed功能不会影响正常的网络连接。
 
-这里我也给不想自己更改文件的小伙伴们一份更改好的文件 [tmp](tmp) 自行下载即可。
+这里我也给不想自己更改文件的小伙伴们一份更改好的文件 [dlut_eda_login.sh](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/dlut_eda_login.sh) 自行下载即可。
 
 ## 第二步 将文件上传至OpenWrt路由器
 
@@ -43,7 +43,7 @@ WinSCP有图形化界面自己将文件上传至/etc下即可。
 
 ### 方法3 直接设置启动项
 
-首先需要将写好的 [脚本文件](tmp) 通过**第二步**的方法(`scp /你的文件目录/dlut_eda_login root@192.168.1.1:/etc/init.d`)上传至`/etc/init.d`。
+首先需要下载 [脚本文件](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/dlut_eda_login) 更改里面的用户名和密码，再通过**第二步**的方法(`scp /你的文件目录/dlut_eda_login root@192.168.1.1:/etc/init.d`)上传至`/etc/init.d`。
 
 给脚本添加可执行权限`chmod 777 dlut_eda_login`
 
