@@ -85,3 +85,9 @@ WinSCP有图形化界面自己将文件上传至/etc下即可。
 
 ![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-19_16-27.jpg)
 
+设置完成后，再进行第一步、第二步和第三步，此时第一步下载的文件使用此文件 [dlut_eda_login.sh](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/%E5%9F%BA%E4%BA%8E%E5%A4%9A%E6%8B%A8%E7%9A%84login/dlut_eda_login.sh)
+
+执行完成第三步后可能会出现显示一次`Internet connected`两次`Fail`的情况，此时请在**负载均衡**->**接口**页面点击**保存&应用**，之后再次执行第三步，全部显示`Internet connected`证明多拨成功。
+
+**目前暂无其他更好的解决办法，如果有大佬有想法请留言指教。**
+
