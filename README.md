@@ -37,9 +37,13 @@ WinSCP有图形化界面自己将文件上传至/etc下即可。
 
 在OpenWrt下找到计划任务，在编辑文件处添加`@reboot /etc/dlut_eda_login.sh -u "你的用户名" -p "你的密码"`，之后保存。
 
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-10_09-51.jpg)
+
 ### 方法2 使用本地启动脚本
 
 在OpenWrt下找到启动项，在最下面找到本地启动脚本，在里面添加`/etc/dlut_eda_login.sh -u "你的用户名" -p "你的密码"`，之后保存。
+
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-10_09-54.jpg)
 
 ### 方法3 直接设置启动项
 
@@ -53,7 +57,7 @@ WinSCP有图形化界面自己将文件上传至/etc下即可。
 
 # 基于单线多拨的login.sh
 
-基于多拨的脚本文件为 [dlut_eda_login.sh]() 在这个文件中需要使用的同学自助更改`curl --interface`后的vwan接口名称。
+基于多拨的脚本文件为 [dlut_eda_login.sh](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/%E5%9F%BA%E4%BA%8E%E5%A4%9A%E6%8B%A8%E7%9A%84login/dlut_eda_login.sh) 在这个文件中需要使用的同学自助更改`curl --interface`后的vwan接口名称。
 
 本脚本仅在OpenWrt上尝试成功使用过。所以接下来我要介绍在OpenWrt上的使用方法。
 
@@ -61,13 +65,13 @@ WinSCP有图形化界面自己将文件上传至/etc下即可。
 
 首先启动多线多拨功能，设置如下图：
 
-![]()
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-19_16-09.jpg)
 
 之后设置接口，将接口改成DHCP客户端。再在**高级设置**中设置**使用网关跃点**
 
 *注意：网关跃点在各个vwan下要设置不同的数值*建议20、21、22这三个数。
 
-![]()
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-19_16-20.jpg)
 
 之后再回到**负载均衡**，查看**接口**、**成员**，将与vwan有关的接口和成员留下，将与wan有关的接口去掉。
 
@@ -75,9 +79,9 @@ WinSCP有图形化界面自己将文件上传至/etc下即可。
 
 最终设置如下：
 
-![]()
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-19_16-25.jpg)
 
-![]()
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-19_16-26.jpg)
 
-![]()
+![](https://github.com/MoLiYue/dlut_eda_network_auto_login_openwrt/blob/main/pictures/2021-09-19_16-27.jpg)
 
